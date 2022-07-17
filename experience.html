@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script></body>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+	<title>Experience | Firdaus😎</title>
+</head>
+<body>
+ <audio controls autoplay>
+<source src="song/lagu.mp3" type="audio/mpeg">
+<style= border-radius: 5px></style>
+</audio>
+ 
+ <style>
+		body
+		{
+			background-image:url('img/bg.png') 
+		}
+</style>
+
+	<div class="a">
+
+	<!-- TAJUK WEBSITE -->
+<h1><marquee behavior="alternate" style="color: black;"><h4><b>This is one of the best examples of my experience recently</b></h4></marquee></h1>
+	
+    
+
+	<!-- NAVIGATION BAR/ TAB -->
+
+<div class="b" style="background-color: transparent; border-radius:30px">
+	<a href="index.html">Home</a>
+	<span style="padding-left: 25px;"></span>	
+	<a href="biodata.html">About</a>
+	<span style="padding-left: 25px;"></span>	
+	<a href="education.html">Education</a>
+	<span style="padding-left: 25px;"></span>	
+	<a href="experience.html">Experience</a>
+	<span style="padding-left: 25px;"></span>	
+	<a href="achievement.html">Achievement</a>
+	<span style="padding-left: 25px;"></span>	
+    <a href="contact.html">Contact</a>
+	<span style="padding-left: 25px;"></span>	
+</div>
+
+
+
+
+
+
+<br><br>
+
+
+<img src="img/sick.jpg" width="250px" style="border-radius: 40px;border-style: dotted;">
+
+<p align="justify">
+
+<li style="list-style-type: square;"> <font color="red"> 01/2022 to 04/2022 </font> </li>
+<br>I was hospitalized for broken arm bones
+<ul style="list-style-type: square;">Fortunately, my left hand was not badly injured, and I was dismissed only for requesting a CT scan before being permitted to go. This is my first my time at a hospital.</ul>
+
+
+<p align="center">
+<img src="img/fizow.png" width="250px">
+</p>
+
+<br>
+<li style="list-style-type: square;"> <font color="red"> 03/2020 to 08/2020 </font></li>
+<br>Waiter at FIZOW KITCHEN
+<ul style="list-style-type: square;">Cooking by following recipes, including measuring, weighing and mixing ingredients.</ul>
+
+
+
+<p align="center">
+<img src="img/7e.jpg" align="center" width="500" height="300">
+</p>
+
+<br>
+<li style="list-style-type: square;"> <font color="red"> 12/2019 to 03/2020 </font></li>
+<br>Staff at 7-Eleven Malaysia
+<ul style="list-style-type: square;">works with various affiliate teams to help them find prospects, test campaigns, and make money. </ul>
+
+
+
+
+
+
+
+
+<footer>
+
+<p>
+
+<a href="https://www.wasap.my/60189025988/Hi, i am Firdaus. Please visit this link perhaps I can assist you or we can become friends." target="_blank"><img src="img/ws.png" width="40px"></a>
+
+<a href="https://facebook.com/firdaus.dzarawi" target="_blank"><img src="img/fb.png" width="40px"></a>
+
+<a href="mailto:muhammadfirdausdzarawi@gmail.com"><img src="img/gmail.png" width="40px"></a>
+
+<a href="https://t.me/Firdausdzarawi" target="_blank"><img src="img/tg.png" width="40px"></a>
+
+</p>
+
+</footer>
+
+
+
+
+
+<p><b>Copyright © Firdaus Dzarawi</b></p>
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script></body>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+	<title>Education | Firdaus😎</title>
+</head>
+<body>
+<audio controls autoplay>
+<source src="song/lagu.mp3" type="audio/mpeg">
+<style= border-radius: 5px></style>
+</audio>
+
+ <style>
+		body
+		{
+			background-image:url('img/bg.png') 
+		}
+</style>
+
+	<div class="a">
+
+	<!-- TAJUK WEBSITE -->
+<h1><marquee behavior="alternate" style="color: black;"><h4><b>This is all about my latest education</b></h4></marquee></h1>
+	
+    
+
+	<!-- NAVIGATION BAR/ TAB -->
+
+<div class="b" style="background-color: transparent; border-radius:30px">
+	<a href="index.html">Home</a>
+	<span style="padding-left: 25px;"></span>	
+	<a href="biodata.html">About</a>
+	<span style="padding-left: 25px;"></span>	
+	<a href="education.html">Education</a>
+	<span style="padding-left: 25px;"></span>	
+	<a href="experience.html">Experience</a>
+	<span style="padding-left: 25px;"></span>	
+	<a href="achievement.html">Achievement</a>
+	<span style="padding-left: 25px;"></span>	
+    <a href="contact.html">Contact</a>
+	<span style="padding-left: 25px;"></span>	
+
+
+</div>
+	
+
+<p align="center">
+
+<img src="img/uitm.gif" align="center" width="15%" >
+    <p align="center">
+<img src="img/uitm.png" style="width:40%;" class="a"><br><br>
+<b>Bachelor of Business (Hons) in Marketing ( October 2020 — October 2023)</b>
+<br><b>Universiti Teknologi MARA (UiTM) Kelantan Branch, Kota Bharu Campus</b>
+<br>Program Name:
+
+<li>Bachelor of Administration and Business Study (Hons.) Islamic Banking</li>
+<li>C.G.P.A : 3.81 </li>
+</ul></p>
+
+
+
+<p align="center">
+<img src="img/koloh.jpg" style="width:15%;" class="a"><br><br>
+<b>Economy</b>
+<br><b>Pra university Sekolah Menengah Kebangsaan Sri Gunung</b>
+<br>Subject taken:
+
+<li>Bahasa Melayu, Economy, Pengajian Am , Kemahiran Melayu Komunikatif, Sejarah</li>
+<li>C.G.P.A : 3.75 </li>
+</ul></p>
+
+
+
+<p align="center">
+<img src="img/smach.jpg" style="width:15%;" class="a"><br>
+<b>Sijil Pelajaran Malaysia (S.P.M)</b>
+<br><b>Sekolah Menengah Sains Machang</b>
+<br>Subject taken:
+
+<li>Bahasa Melayu, Pendidikan Islam, Biologi, Fizik, Kimia, Matematik Tambahan, Matematik, Sejarah, Bahasa Inggeris </li>
+</ul>
+</p></font>
+  
+
+
+
+<footer>
+
+<p>
+
+<a href="https://www.wasap.my/60189025988/Hi, i am Firdaus. Please visit this link perhaps I can assist you or we can become friends." target="_blank"><img src="img/ws.png" width="40px"></a>
+
+<a href="https://facebook.com/firdaus.dzarawi" target="_blank"><img src="img/fb.png" width="40px"></a>
+
+<a href="mailto:muhammadfirdausdzarawi@gmail.com"><img src="img/gmail.png" width="40px"></a>
+
+<a href="https://t.me/Firdausdzarawi" target="_blank"><img src="img/tg.png" width="40px"></a>
+
+</p>
+
+</footer>
+
+
+
+
+
+<p><b>Copyright © Firdaus Dzarawi</b></p>
+
+
+
+
+</div>
+
+</body>
+</html>
